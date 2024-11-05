@@ -12,17 +12,18 @@ const paymentSchema = new mongoose.Schema({
     },
     payment_method: {
         type: String,
+        enum: ['Khi nhận hàng', 'Momo', 'Thẻ tín dụng', 'Ngân hàng liên kết'],
         required: true
     },
     payment_date: {
-        type: Date, default: Date.now
+        type: Date,
+        default: Date.now
     },
     status: {
         type: String,
         enum: ['pending', 'completed', 'failed'],
         default: 'pending'
     }
-}, { timestamps: true }
-);
+}, { timestamps: true });
 
-module.exports = mongoose.model('Payment', paymentSchema);
+module.exports = mongoose.model('Payment', paymentSchema)
