@@ -19,6 +19,7 @@ const wishRouter = require('./src/v1/routers/wishRouter')
 const compareRouter = require('./src/v1/routers/compareRouter')
 const cartRouter = require('./src/v1/routers/cartRouter')
 const orderRouter = require('./src/v1/routers/orderRouter')
+const paymentRouter = require('./src/v1/routers/paymentRouter')
 
 const app = express()
 
@@ -87,6 +88,7 @@ app.use('/api/wish', wishRouter)
 app.use('/api/compare', compareRouter)
 app.use('/api/cart', cartRouter)
 app.use('/api/order', orderRouter)
+app.use('/api/payment', paymentRouter)
 
 app.get('/', function (req, res) {
     res.send('Hello World')

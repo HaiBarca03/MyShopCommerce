@@ -14,7 +14,6 @@ const createOrderFromCart = async (req, res) => {
             return res.status(404).json({ message: 'Cart not found for this user.' });
         }
 
-
         const products = [];
         let totalAmount = 0;
 
