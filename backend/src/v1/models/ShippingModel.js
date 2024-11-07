@@ -17,13 +17,9 @@ const shippingSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    tracking_number: {
-        type: String,
-        required: true
-    },
     status: {
         type: String,
-        enum: ['shipped', 'in transit', 'delivered'],
+        enum: ['shipped', 'in transit', 'delivered', 'failure'],
         default: 'shipped'
     }
 }, { timestamps: true }
