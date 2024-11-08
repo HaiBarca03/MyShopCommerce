@@ -21,6 +21,7 @@ const cartRouter = require('./src/v1/routers/cartRouter')
 const orderRouter = require('./src/v1/routers/orderRouter')
 const paymentRouter = require('./src/v1/routers/paymentRouter')
 const shippingRouter = require('./src/v1/routers/shippingRouter')
+const reviewsRouter = require('./src/v1/routers/reviewsRouter')
 
 const app = express()
 
@@ -91,6 +92,7 @@ app.use('/api/cart', cartRouter)
 app.use('/api/order', orderRouter)
 app.use('/api/payment', paymentRouter)
 app.use('/api/ship', shippingRouter)
+app.use('/api/review', reviewsRouter)
 
 app.get('/', function (req, res) {
     res.send('Hello World')
