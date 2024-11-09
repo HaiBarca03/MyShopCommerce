@@ -29,6 +29,7 @@
     "nodemailer": "^6.9.15",
     "nodemailer-sendgrid-transport": "^0.2.0",
     "nodemon": "^3.1.4",
+    "socket.io": "^4.8.1",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "validator": "^13.12.0"
